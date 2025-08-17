@@ -65,44 +65,17 @@
             max-height: 80%;
             overflow-y: auto;
         }
-        /* Video Intro Modal Styles */
-        .video-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: 2000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 1;
-            transition: opacity 1s ease-in-out;
-        }
-        .video-modal video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .hidden-content {
-            display: none;
-        }
-        .fade-out {
-            opacity: 0;
-            pointer-events: none;
-        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
-    <!-- Video Intro Modal -->
-    <div id="video-intro-modal" class="video-modal">
-        <video id="intro-video" src="BROpen.MP4" autoplay muted playsinline></video>
-    </div>
-
     <!-- Main Content -->
-    <div id="main-content" class="hidden-content">
+    <div id="main-content">
         <div class="container mx-auto p-8 lg:p-12">
+            <!-- Today Button -->
+            <button id="today-button" class="fixed bottom-4 right-4 bg-purple-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-purple-600 transition-all duration-200 z-10">
+                Today
+            </button>
+            
             <!-- Main Header Section -->
             <header class="text-center mb-12">
                 <!-- Replaced the h1 with an image from the provided file -->
@@ -115,7 +88,7 @@
             <!-- Daily Itinerary Cards -->
             <div class="space-y-8">
                 <!-- Day 1: Sunday, August 24 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div id="day-aug-24" class="bg-white rounded-2xl shadow-lg p-6">
                     <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
                         <div class="flex-grow">
                             <h3 class="text-2xl font-bold text-gray-900">Sunday, August 24</h3>
@@ -146,7 +119,7 @@
                 </div>
 
                 <!-- Day 2: Monday, August 25 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div id="day-aug-25" class="bg-white rounded-2xl shadow-lg p-6">
                     <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
                         <div class="flex-grow">
                             <h3 class="text-2xl font-bold text-gray-900">Monday, August 25 - Lisbon</h3>
@@ -196,7 +169,7 @@
                 </div>
 
                 <!-- Day 3: Tuesday, August 26 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div id="day-aug-26" class="bg-white rounded-2xl shadow-lg p-6">
                     <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
                         <div class="flex-grow">
                             <h3 class="text-2xl font-bold text-gray-900">Tuesday, August 26 - Lisbon</h3>
@@ -228,7 +201,7 @@
                 </div>
 
                 <!-- Day 4: Wednesday, August 27 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div id="day-aug-27" class="bg-white rounded-2xl shadow-lg p-6">
                     <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
                         <div class="flex-grow">
                             <h3 class="text-2xl font-bold text-gray-900">Wednesday, August 27 - Lisbon</h3>
@@ -251,7 +224,7 @@
                 </div>
                 
                 <!-- Day 5: Thursday, August 28 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div id="day-aug-28" class="bg-white rounded-2xl shadow-lg p-6">
                     <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
                         <div class="flex-grow">
                             <h3 class="text-2xl font-bold text-gray-900">Thursday, August 28 - Travel to Porto</h3>
@@ -292,7 +265,7 @@
                 </div>
                 
                 <!-- Day 6: Friday, August 29 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div id="day-aug-29" class="bg-white rounded-2xl shadow-lg p-6">
                     <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
                         <div class="flex-grow">
                             <h3 class="text-2xl font-bold text-gray-900">Friday, August 29 - Porto</h3>
@@ -313,7 +286,7 @@
                 </div>
                 
                  <!-- Day 7: Saturday, August 30 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div id="day-aug-30" class="bg-white rounded-2xl shadow-lg p-6">
                     <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
                         <div class="flex-grow">
                             <h3 class="text-2xl font-bold text-gray-900">Saturday, August 30 - Travel to Azores</h3>
@@ -354,7 +327,7 @@
                 </div>
                 
                 <!-- Day 8 - 13: August 30 - September 4 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div id="day-aug-30-sep-4" class="bg-white rounded-2xl shadow-lg p-6">
                     <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
                         <div class="flex-grow">
                             <h3 class="text-2xl font-bold text-gray-900">Saturday, August 30 - Thursday, September 4</h3>
@@ -371,7 +344,7 @@
                 </div>
                 
                 <!-- Day 14: Friday, September 5 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div id="day-sep-5" class="bg-white rounded-2xl shadow-lg p-6">
                     <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
                         <div class="flex-grow">
                             <h3 class="text-2xl font-bold text-gray-900">Friday, September 5 - Azores</h3>
@@ -390,7 +363,7 @@
                 </div>
 
                 <!-- Day 15: Saturday, September 6 -->
-                <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div id="day-sep-6" class="bg-white rounded-2xl shadow-lg p-6">
                     <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
                         <div class="flex-grow">
                             <h3 class="text-2xl font-bold text-gray-900">Saturday, September 6 - Departure</h3>
@@ -444,49 +417,56 @@
     </div>
 
     <script>
+        const modalData = {
+            'modal-link-flight1': { title: 'Flight Details', content: 'Airline: Delta<br>Flight #: 1707<br>Notes: DTW-BOS' },
+            'modal-link-flight2': { title: 'Flight Details', content: 'Airline: Delta<br>Flight #: 0124<br>Notes: BOS-LIS' },
+            'modal-link-hotel1': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia 73118888601825<br><br><b>Hotel Website:</b><br><a href="https://www.hoteldabaixa.com/en/" target="_blank" class="text-blue-500 hover:underline">https://www.hoteldabaixa.com/en/</a>' },
+            'modal-link-activity1': { title: 'Activity Details', content: 'Notes: free cancellation' },
+            'modal-link-activity2': { title: 'Activity Details', content: 'Notes: Nuno Tuk, 420 Euros' },
+            'modal-link-explore': { title: 'Open--Explore Lisbon Details', content: 'Possible places to explore: Pink & Green Streets, Arch. Note: via What\'s App' },
+            'modal-link-activity3': { title: 'Activity Details', content: 'Notes: Tour Booked with Carlos.<br>Link: <a href="https://www.premiumtours.pt/pt/tours/passeio-privado-sintra-2-2/" target="_blank" class="text-blue-500 hover:underline">https://www.premiumtours.pt/pt/tours/passeio-privado-sintra-2-2/</a>' },
+            'modal-link-van1': { title: 'Van to Hotel Details', content: 'TOPTOUR PORTUGAL®<br>+351217151675<br>Booked on Trip Advisor, For other questions, contact:<br>Viator Customer Care<br>702-939-9839' },
+            'modal-link-travel1': { title: 'Van to Porto Details', content: 'Notes: Aveiro, Obidos and Nazare<br>Confirmation #: AMF Deposit Paid<br><br><b>Van Contact Info:</b><br>Fernando Madeira<br>Lisbon Private Transfers<br>+351 968 376 643 WhatsApp<br>www.lisbonprivatetransfers.com<br>fernando@lisbonprivatetransfers.com' },
+            'modal-link-hotel2': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia itinerary: 73038457669454<br><br><b>Expedia Itinerary:</b><br><a href="https://www.expedia.com/trips/egti-FR2-87A-PRY9/details/NWNhNjY2NGYtZTAxOS01NDdjLTk5ZmYtZjNiMDgxMGZiYzE5O2U3ZjI3YzE5LTAwN2ItNGM0Yy04MDVjLTRiZmI3NDBkODQ3Y18wO2VnOnByb3BlcnR5OjQ2ZWRlMDBmYjg0ZjI4ZGYzNTE2ZTVmYWM1MDQ1ZDg4" target="_blank" class="text-blue-500 hover:underline">https://www.expedia.com/trips/egti-FR2-87A-PRY9/details/...</a>' },
+            'modal-link-activity4': { title: 'Activity Details', content: 'Notes: Leave Bac' },
+            'modal-link-flight3': { title: 'Flight Details', content: 'Airline: SATA<br>Flight #: S40173<br>Notes: LIS-Azores' },
+            'modal-link-hotel3': { title: 'Accommodation Details', content: 'Details: Jenn and Kirschner on one reservation - Shefman and Singer made separate resv<br>Confirmation #: Hotels.com 72060560675386' },
+            'modal-link-hotel4': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia itinerary: 72064522526321' },
+            'modal-link-flight4': { title: 'Flight Details', content: 'Airline: SATA<br>Flight #: S40283<br>Notes: Azores-BOS' },
+            'modal-link-flight5': { title: 'Flight Details', content: 'Airline: Delta<br>Flight #: DL2222<br>Notes: BOS-DTW' }
+        };
+
+        // Date mappings for scrolling
+        const dateMappings = {
+            'Aug 24': 'day-aug-24',
+            'Aug 25': 'day-aug-25',
+            'Aug 26': 'day-aug-26',
+            'Aug 27': 'day-aug-27',
+            'Aug 28': 'day-aug-28',
+            'Aug 29': 'day-aug-29',
+            'Aug 30': 'day-aug-30',
+            'Sep 5': 'day-sep-5',
+            'Sep 6': 'day-sep-6'
+        };
+
         document.addEventListener('DOMContentLoaded', () => {
-            const videoModal = document.getElementById('video-intro-modal');
-            const video = document.getElementById('intro-video');
-            const mainContent = document.getElementById('main-content');
-            
-            // This event listener handles the transition once the video has finished playing
-            video.addEventListener('ended', () => {
-                videoModal.classList.add('fade-out');
-                setTimeout(() => {
-                    videoModal.style.display = 'none';
-                    mainContent.classList.remove('hidden-content');
-                }, 1000); // This timeout matches the CSS transition duration
-            });
+            // "Today" button logic
+            const todayButton = document.getElementById('today-button');
+            if (todayButton) {
+                // Use real current date
+                todayButton.addEventListener('click', () => {
+                    const today = new Date();
+                    const month = today.toLocaleString('en-us', { month: 'short' });
+                    const day = today.getDate();
+                    const todayString = `${month} ${day}`;
 
-            // Fallback in case the video fails to autoplay or is paused
-            setTimeout(() => {
-                if (!video.ended) {
-                    videoModal.classList.add('fade-out');
-                    setTimeout(() => {
-                        videoModal.style.display = 'none';
-                        mainContent.classList.remove('hidden-content');
-                    }, 1000);
-                }
-            }, 2000); // 2-second timeout
-
-            const modalData = {
-                'modal-link-flight1': { title: 'Flight Details', content: 'Airline: Delta<br>Flight #: 1707<br>Notes: DTW-BOS' },
-                'modal-link-flight2': { title: 'Flight Details', content: 'Airline: Delta<br>Flight #: 0124<br>Notes: BOS-LIS' },
-                'modal-link-hotel1': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia 73118888601825<br><br><b>Hotel Website:</b><br><a href="https://www.hoteldabaixa.com/en/" target="_blank" class="text-blue-500 hover:underline">https://www.hoteldabaixa.com/en/</a>' },
-                'modal-link-activity1': { title: 'Activity Details', content: 'Notes: free cancellation' },
-                'modal-link-activity2': { title: 'Activity Details', content: 'Notes: Nuno Tuk, 420 Euros' },
-                'modal-link-explore': { title: 'Open--Explore Lisbon Details', content: 'Possible places to explore: Pink & Green Streets, Arch. Note: via What\'s App' },
-                'modal-link-activity3': { title: 'Activity Details', content: 'Notes: Tour Booked with Carlos.<br>Link: <a href="https://www.premiumtours.pt/pt/tours/passeio-privado-sintra-2-2/" target="_blank" class="text-blue-500 hover:underline">https://www.premiumtours.pt/pt/tours/passeio-privado-sintra-2-2/</a>' },
-                'modal-link-van1': { title: 'Van to Hotel Details', content: 'TOPTOUR PORTUGAL®<br>+351217151675<br>Booked on Trip Advisor, For other questions, contact:<br>Viator Customer Care<br>702-939-9839' },
-                'modal-link-travel1': { title: 'Van to Porto Details', content: 'Notes: Aveiro, Obidos and Nazare<br>Confirmation #: AMF Deposit Paid<br><br><b>Van Contact Info:</b><br>Fernando Madeira<br>Lisbon Private Transfers<br>+351 968 376 643 WhatsApp<br>www.lisbonprivatetransfers.com<br>fernando@lisbonprivatetransfers.com' },
-                'modal-link-hotel2': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia itinerary: 73038457669454<br><br><b>Expedia Itinerary:</b><br><a href="https://www.expedia.com/trips/egti-FR2-87A-PRY9/details/NWNhNjY2NGYtZTAxOS01NDdjLTk5ZmYtZjNiMDgxMGZiYzE5O2U3ZjI3YzE5LTAwN2ItNGM0Yy04MDVjLTRiZmI3NDBkODQ3Y18wO2VnOnByb3BlcnR5OjQ2ZWRlMDBmYjg0ZjI4ZGYzNTE2ZTVmYWM1MDQ1ZDg4" target="_blank" class="text-blue-500 hover:underline">https://www.expedia.com/trips/egti-FR2-87A-PRY9/details/...</a>' },
-                'modal-link-activity4': { title: 'Activity Details', content: 'Notes: Leave Bac' },
-                'modal-link-flight3': { title: 'Flight Details', content: 'Airline: SATA<br>Flight #: S40173<br>Notes: LIS-Azores' },
-                'modal-link-hotel3': { title: 'Accommodation Details', content: 'Details: Jenn and Kirschner on one reservation - Shefman and Singer made separate resv<br>Confirmation #: Hotels.com 72060560675386' },
-                'modal-link-hotel4': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia itinerary: 72064522526321' },
-                'modal-link-flight4': { title: 'Flight Details', content: 'Airline: SATA<br>Flight #: S40283<br>Notes: Azores-BOS' },
-                'modal-link-flight5': { title: 'Flight Details', content: 'Airline: Delta<br>Flight #: DL2222<br>Notes: BOS-DTW' }
-            };
+                    const elementId = dateMappings[todayString] || 'day-aug-24'; // Fallback to first day
+                    const todayCard = document.getElementById(elementId);
+                    if (todayCard) {
+                        todayCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            }
 
             // Attach event listeners for modal links
             Object.keys(modalData).forEach(id => {
