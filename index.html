@@ -17,17 +17,24 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f4f7f9;
+            background-image: url('BRopen.JPG');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #1a202c; /* Ensure text is readable on the background */
         }
         /* Style for the main container to ensure it's centered and has padding */
         .container {
             max-width: 80rem; /* Adjusted for better wide-screen viewing */
+            background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 1rem;
         }
         /* Custom scrollbar for a cleaner look */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #e2e8f0;
+            background: #e2e8e0;
         }
         ::-webkit-scrollbar-thumb {
             background: #94a3b8;
@@ -68,346 +75,348 @@
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
+    <!-- Main Content -->
+    <div id="main-content">
+        <div class="container mx-auto p-8 lg:p-12">
+            <!-- Main Header Section -->
+            <header class="text-center mb-12">
+                <h1 class="text-4xl font-extrabold text-gray-900 leading-tight tracking-wider transition-all duration-300 transform hover:scale-105 title-font">
+                    <i class="fas fa-plane-departure text-purple-600 mr-2"></i>
+                    <span class="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Backroads Bunch 2025</span>
+                </h1>
+                <p class="text-xl text-gray-600 mt-2">Lisbon, Porto, and Azores</p>
+                <p class="text-sm text-gray-500 mt-1">August 24 - September 6, 2025</p>
+                <p class="text-sm text-gray-500 mt-1 font-bold">Fishkind • Kirschner • Sheffman • Singer</p>
+            </header>
 
-    <div class="container mx-auto p-8 lg:p-12">
-        <!-- Main Header Section -->
-        <header class="text-center mb-12">
-            <h1 class="text-4xl font-extrabold text-gray-900 leading-tight tracking-wider transition-all duration-300 transform hover:scale-105 title-font">
-                <i class="fas fa-plane-departure text-purple-600 mr-2"></i>
-                <span class="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Backroads Bunch 2025</span>
-            </h1>
-            <p class="text-xl text-gray-600 mt-2">Lisbon, Porto, and Azores</p>
-            <p class="text-sm text-gray-500 mt-1">August 24 - September 6, 2025</p>
-            <p class="text-sm text-gray-500 mt-1 font-bold">Fishkind • Kirschner • Sheffman • Singer</p>
-        </header>
+            <!-- Daily Itinerary Cards -->
+            <div class="space-y-8">
+                <!-- Day 1: Sunday, August 24 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900">Sunday, August 24</h3>
+                        </div>
+                        <div class="flex mt-2 md:mt-0 space-x-2">
+                        </div>
+                    </div>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-center p-3 rounded-lg bg-blue-50">
+                            <i class="fas fa-plane-departure text-blue-500 mr-4 text-lg"></i>
+                            <div>
+                                <p class="font-semibold text-blue-800">Flight: Delta 1707 (DTW-BOS) 
+                                    <span id="modal-link-flight1" class="text-xs text-blue-500 cursor-pointer hover:underline ml-2">(Details)</span>
+                                </p>
+                                <p class="text-gray-600">Departure: 5:45 PM, Arrival: 7:52 PM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-3 rounded-lg bg-blue-50">
+                            <i class="fas fa-plane-departure text-blue-500 mr-4 text-lg"></i>
+                            <div>
+                                <p class="font-semibold text-blue-800">Flight: Delta 0124 (BOS-LIS)
+                                    <span id="modal-link-flight2" class="text-xs text-blue-500 cursor-pointer hover:underline ml-2">(Details)</span>
+                                </p>
+                                <p class="text-gray-600">Departure: 11:25 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- Daily Itinerary Cards -->
-        <div class="space-y-8">
-            <!-- Day 1: Sunday, August 24 -->
-            <div class="bg-white rounded-2xl shadow-lg p-6">
-                <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
-                    <div class="flex-grow">
-                        <h3 class="text-2xl font-bold text-gray-900">Sunday, August 24</h3>
-                    </div>
-                    <div class="flex mt-2 md:mt-0 space-x-2">
-                    </div>
-                </div>
-                <div class="space-y-4 text-sm">
-                    <div class="flex items-center p-3 rounded-lg bg-blue-50">
-                        <i class="fas fa-plane-departure text-blue-500 mr-4 text-lg"></i>
-                        <div>
-                            <p class="font-semibold text-blue-800">Flight: Delta 1707 (DTW-BOS) 
-                                <span id="modal-link-flight1" class="text-xs text-blue-500 cursor-pointer hover:underline ml-2">(Details)</span>
-                            </p>
-                            <p class="text-gray-600">Departure: 5:45 PM, Arrival: 7:52 PM</p>
+                <!-- Day 2: Monday, August 25 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900">Monday, August 25 - Lisbon</h3>
+                        </div>
+                        <div class="flex mt-2 md:mt-0 space-x-2">
                         </div>
                     </div>
-                    <div class="flex items-center p-3 rounded-lg bg-blue-50">
-                        <i class="fas fa-plane-departure text-blue-500 mr-4 text-lg"></i>
-                        <div>
-                            <p class="font-semibold text-blue-800">Flight: Delta 0124 (BOS-LIS)
-                                <span id="modal-link-flight2" class="text-xs text-blue-500 cursor-pointer hover:underline ml-2">(Details)</span>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-center p-3 rounded-lg bg-blue-50">
+                            <i class="fas fa-plane-arrival text-blue-500 mr-4 text-lg"></i>
+                            <div>
+                                <p class="font-semibold text-blue-800">Flight Arrival</p>
+                                <p class="text-gray-600">Arrival in Lisbon: 10:45 AM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-3 rounded-lg bg-blue-50">
+                            <i class="fas fa-shuttle-van text-blue-500 mr-4 text-lg"></i>
+                            <div>
+                                <p class="font-semibold text-blue-800">Private Van to Hotel de Baxia
+                                    <span id="modal-link-van1" class="text-xs text-blue-500 cursor-pointer hover:underline ml-2">(Details)</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-3 rounded-lg bg-green-50">
+                            <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
+                            <div>
+                                <p class="font-semibold text-green-800">Lisbon Hotel da Baxia Check-in
+                                    <span id="modal-link-hotel1" class="text-xs text-green-500 cursor-pointer hover:underline ml-2">(Details)</span>
+                                </p>
+                                <p class="text-gray-600">Check-in from August 25 - 28</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-3 rounded-lg bg-yellow-50">
+                            <i class="fas fa-walking text-yellow-500 mr-4 text-lg"></i>
+                            <div>
+                                <p class="font-semibold text-yellow-800">Jewish Walking Tour 🇮🇱
+                                    <span id="modal-link-activity1" class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2">(Details)</span>
+                                </p>
+                                <p class="text-gray-600">5:00 PM - 7:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-3 rounded-lg bg-pink-50">
+                            <i class="fas fa-utensils text-pink-500 mr-4 text-lg"></i>
+                            <p class="font-semibold text-pink-800">Dinner at ROSAMAR Rua da Rosa</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 3: Tuesday, August 26 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900">Tuesday, August 26 - Lisbon</h3>
+                        </div>
+                        <div class="flex mt-2 md:mt-0 space-x-2">
+                        </div>
+                    </div>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-center p-3 rounded-lg bg-yellow-50">
+                            <i class="fas fa-bicycle text-yellow-500 mr-4 text-lg"></i>
+                            <div>
+                                <p class="font-semibold text-yellow-800">Tuk Tuk Tour
+                                    <span id="modal-link-activity2" class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2">(Details)</span>
+                                </p>
+                                <p class="text-gray-600">Starts at 10:00 AM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-3 rounded-lg bg-purple-50">
+                            <i class="fas fa-route text-purple-500 mr-4 text-lg"></i>
+                            <p class="font-semibold text-purple-800">Open--Explore Lisbon
+                                 <span id="modal-link-explore" class="text-xs text-purple-500 cursor-pointer hover:underline ml-2">(Details)</span>
                             </p>
-                            <p class="text-gray-600">Departure: 11:25 PM</p>
+                        </div>
+                        <div class="flex items-center p-3 rounded-lg bg-pink-50">
+                            <i class="fas fa-utensils text-pink-500 mr-4 text-lg"></i>
+                            <p class="font-semibold text-pink-800">Dinner at Frou Frou JNCQUOIAv</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 4: Wednesday, August 27 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900">Wednesday, August 27 - Lisbon</h3>
+                        </div>
+                        <div class="flex mt-2 md:mt-0 space-x-2">
+                        </div>
+                    </div>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-center p-3 rounded-lg bg-yellow-50">
+                            <i class="fas fa-castle text-yellow-500 mr-4 text-lg"></i>
+                            <p class="font-semibold text-yellow-800">Sintra Tour with Carlos
+                                 <span id="modal-link-activity3" class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2">(Details)</span>
+                            </p>
+                        </div>
+                        <div class="flex items-center p-3 rounded-lg bg-pink-50">
+                            <i class="fas fa-utensils text-pink-500 mr-4 text-lg"></i>
+                            <p class="font-semibold text-pink-800">Dinner at Lumi Rooftop Restaurant</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Day 5: Thursday, August 28 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900">Thursday, August 28 - Travel to Porto</h3>
+                        </div>
+                        <div class="flex mt-2 md:mt-0 space-x-2">
+                        </div>
+                    </div>
+                    <div class="space-y-4 text-sm">
+                         <div class="flex items-center p-3 rounded-lg bg-green-50">
+                            <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
+                            <div>
+                                <p class="font-semibold text-green-800">Lisbon Hotel da Baxia Check-out</p>
+                            </div>
+                        </div>
+                         <div class="flex items-center p-3 rounded-lg bg-yellow-50">
+                            <i class="fas fa-van text-yellow-500 mr-4 text-lg"></i>
+                            <div>
+                                <p class="font-semibold text-yellow-800">Van to Porto with Stops
+                                    <span id="modal-link-travel1" class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2">(Details)</span>
+                                </p>
+                                <p class="text-gray-600">8:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-3 rounded-lg bg-green-50">
+                            <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
+                            <div>
+                                <p class="font-semibold text-green-800">Torel Palace Porto Check-in
+                                    <span id="modal-link-hotel2" class="text-xs text-green-500 cursor-pointer hover:underline ml-2">(Details)</span>
+                                </p>
+                                <p class="text-gray-600">Check-in from August 28 - 30</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-3 rounded-lg bg-pink-50">
+                            <i class="fas fa-utensils text-pink-500 mr-4 text-lg"></i>
+                            <p class="font-semibold text-pink-800">Dinner at The Door Rua das Taipas</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Day 6: Friday, August 29 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900">Friday, August 29 - Porto</h3>
+                        </div>
+                        <div class="flex mt-2 md:mt-0 space-x-2">
+                        </div>
+                    </div>
+                    <div class="space-y-4 text-sm">
+                         <div class="flex items-center p-3 rounded-lg bg-yellow-50">
+                            <i class="fas fa-wine-bottle text-yellow-500 mr-4 text-lg"></i>
+                            <p class="font-semibold text-yellow-800">Amit Tour Douro Valley</p>
+                        </div>
+                        <div class="flex items-center p-3 rounded-lg bg-pink-50">
+                            <i class="fas fa-utensils text-pink-500 mr-4 text-lg"></i>
+                            <p class="font-semibold text-pink-800">Private Dinner at 7:30 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                 <!-- Day 7: Saturday, August 30 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900">Saturday, August 30 - Travel to Azores</h3>
+                        </div>
+                        <div class="flex mt-2 md:mt-0 space-x-2">
+                        </div>
+                    </div>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-center p-3 rounded-lg bg-green-50">
+                            <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
+                            <p class="font-semibold text-green-800">Porto Torel Palace Porto Check-out</p>
+                        </div>
+                        <div class="flex items-center p-3 rounded-lg bg-yellow-50">
+                            <i class="fas fa-walking text-yellow-500 mr-4 text-lg"></i>
+                            <div>
+                                <p class="font-semibold text-yellow-800">Amit Tour Porto
+                                    <span id="modal-link-activity4" class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2">(Details)</span>
+                                </p>
+                                <p class="text-gray-600">10:00 AM - 3:00 PM</p>
+                            </div>
+                        </div>
+                         <div class="flex items-center p-3 rounded-lg bg-blue-50">
+                            <i class="fas fa-plane-departure text-blue-500 mr-4 text-lg"></i>
+                            <div>
+                                <p class="font-semibold text-blue-800">Flight: SATA S40173 (LIS-Azores)
+                                    <span id="modal-link-flight3" class="text-xs text-blue-500 cursor-pointer hover:underline ml-2">(Details)</span>
+                                </p>
+                                <p class="text-gray-600">Departure: 7:35 PM, Arrival: 9:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-3 rounded-lg bg-green-50">
+                            <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
+                            <p class="font-semibold text-green-800">Azores Hotel Check-in
+                                <span id="modal-link-hotel3" class="text-xs text-green-500 cursor-pointer hover:underline ml-2">(Details)</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Day 8 - 13: August 30 - September 4 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900">Saturday, August 30 - Thursday, September 4</h3>
+                        </div>
+                        <div class="flex mt-2 md:mt-0 space-x-2">
+                        </div>
+                    </div>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-center p-3 rounded-lg bg-purple-50">
+                            <i class="fas fa-road text-purple-500 mr-4 text-lg"></i>
+                            <p class="font-semibold text-purple-800">Backroads Activities</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Day 14: Friday, September 5 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900">Friday, September 5 - Azores</h3>
+                        </div>
+                        <div class="flex mt-2 md:mt-0 space-x-2">
+                        </div>
+                    </div>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-center p-3 rounded-lg bg-green-50">
+                            <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
+                            <p class="font-semibold text-green-800">Grand Hotel Azores Atlântico
+                                 <span id="modal-link-hotel4" class="text-xs text-green-500 cursor-pointer hover:underline ml-2">(Details)</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 15: Saturday, September 6 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900">Saturday, September 6 - Departure</h3>
+                        </div>
+                        <div class="flex mt-2 md:mt-0 space-x-2">
+                        </div>
+                    </div>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-center p-3 rounded-lg bg-green-50">
+                            <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
+                            <p class="font-semibold text-green-800">Azores Hotel Check-out</p>
+                        </div>
+                        <div class="flex items-center p-3 rounded-lg bg-blue-50">
+                            <i class="fas fa-plane-departure text-blue-500 mr-4 text-lg"></i>
+                            <div>
+                                <p class="font-semibold text-blue-800">Flight: SATA S40283 (Azores-BOS)
+                                     <span id="modal-link-flight4" class="text-xs text-blue-500 cursor-pointer hover:underline ml-2">(Details)</span>
+                                </p>
+                                <p class="text-gray-600">Departure: 8:35 AM, Arrival: 10:20 AM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-3 rounded-lg bg-blue-50">
+                            <i class="fas fa-plane-departure text-blue-500 mr-4 text-lg"></i>
+                            <div>
+                                <p class="font-semibold text-blue-800">Flight: Delta DL2222 (BOS-DTW)
+                                    <span id="modal-link-flight5" class="text-xs text-blue-500 cursor-pointer hover:underline ml-2">(Details)</span>
+                                </p>
+                                <p class="text-gray-600">Departure: 12:55 PM, Arrival: 3:05 PM</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Day 2: Monday, August 25 -->
-            <div class="bg-white rounded-2xl shadow-lg p-6">
-                <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
-                    <div class="flex-grow">
-                        <h3 class="text-2xl font-bold text-gray-900">Monday, August 25 - Lisbon</h3>
-                    </div>
-                    <div class="flex mt-2 md:mt-0 space-x-2">
-                    </div>
-                </div>
-                <div class="space-y-4 text-sm">
-                    <div class="flex items-center p-3 rounded-lg bg-blue-50">
-                        <i class="fas fa-plane-arrival text-blue-500 mr-4 text-lg"></i>
-                        <div>
-                            <p class="font-semibold text-blue-800">Flight Arrival</p>
-                            <p class="text-gray-600">Arrival in Lisbon: 10:45 AM</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center p-3 rounded-lg bg-blue-50">
-                        <i class="fas fa-shuttle-van text-blue-500 mr-4 text-lg"></i>
-                        <div>
-                            <p class="font-semibold text-blue-800">Private Van to Hotel de Baxia
-                                <span id="modal-link-van1" class="text-xs text-blue-500 cursor-pointer hover:underline ml-2">(Details)</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex items-center p-3 rounded-lg bg-green-50">
-                        <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
-                        <div>
-                            <p class="font-semibold text-green-800">Lisbon Hotel da Baxia Check-in
-                                <span class="text-xs text-green-500 cursor-pointer hover:underline ml-2" onclick="showModal('Hotel de Baxia Details', 'Details: All 4 under AMF<br>Confirmation #: Expedia 73118888601825')">(Details)</span>
-                            </p>
-                            <a href="https://www.hoteldabaixa.com/en/" target="_blank" class="text-xs text-blue-500 hover:underline ml-2">(Website)</a>
-                            <p class="text-gray-600">Check-in from August 25 - 28</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center p-3 rounded-lg bg-yellow-50">
-                        <i class="fas fa-walking text-yellow-500 mr-4 text-lg"></i>
-                        <div>
-                            <p class="font-semibold text-yellow-800">Jewish Walking Tour
-                                <span id="modal-link-activity1" class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2">(Details)</span>
-                            </p>
-                            <p class="text-gray-600">5:00 PM - 7:00 PM</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center p-3 rounded-lg bg-pink-50">
-                        <i class="fas fa-utensils text-pink-500 mr-4 text-lg"></i>
-                        <p class="font-semibold text-pink-800">Dinner at ROSAMAR Rua da Rosa</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Day 3: Tuesday, August 26 -->
-            <div class="bg-white rounded-2xl shadow-lg p-6">
-                <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
-                    <div class="flex-grow">
-                        <h3 class="text-2xl font-bold text-gray-900">Tuesday, August 26 - Lisbon</h3>
-                    </div>
-                    <div class="flex mt-2 md:mt-0 space-x-2">
-                    </div>
-                </div>
-                <div class="space-y-4 text-sm">
-                    <div class="flex items-center p-3 rounded-lg bg-yellow-50">
-                        <i class="fas fa-bicycle text-yellow-500 mr-4 text-lg"></i>
-                        <div>
-                            <p class="font-semibold text-yellow-800">Tuk Tuk Tour
-                                <span id="modal-link-activity2" class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2">(Details)</span>
-                            </p>
-                            <p class="text-gray-600">Starts at 10:00 AM</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center p-3 rounded-lg bg-yellow-50">
-                        <i class="fas fa-camera-retro text-yellow-500 mr-4 text-lg"></i>
-                        <p class="font-semibold text-yellow-800">Explore Pink & Green Streets; Arch</p>
-                    </div>
-                    <div class="flex items-center p-3 rounded-lg bg-pink-50">
-                        <i class="fas fa-utensils text-pink-500 mr-4 text-lg"></i>
-                        <p class="font-semibold text-pink-800">Dinner at Frou Frou JNCQUOIAv</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Day 4: Wednesday, August 27 -->
-            <div class="bg-white rounded-2xl shadow-lg p-6">
-                <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
-                    <div class="flex-grow">
-                        <h3 class="text-2xl font-bold text-gray-900">Wednesday, August 27 - Lisbon</h3>
-                    </div>
-                    <div class="flex mt-2 md:mt-0 space-x-2">
-                    </div>
-                </div>
-                <div class="space-y-4 text-sm">
-                    <div class="flex items-center p-3 rounded-lg bg-yellow-50">
-                        <i class="fas fa-castle text-yellow-500 mr-4 text-lg"></i>
-                        <p class="font-semibold text-yellow-800">Sintra Tour (All Day)
-                             <span id="modal-link-activity3" class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2">(Details)</span>
-                        </p>
-                    </div>
-                    <div class="flex items-center p-3 rounded-lg bg-pink-50">
-                        <i class="fas fa-utensils text-pink-500 mr-4 text-lg"></i>
-                        <p class="font-semibold text-pink-800">Dinner at Lumi Rooftop Restaurant</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Day 5: Thursday, August 28 -->
-            <div class="bg-white rounded-2xl shadow-lg p-6">
-                <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
-                    <div class="flex-grow">
-                        <h3 class="text-2xl font-bold text-gray-900">Thursday, August 28 - Travel to Porto</h3>
-                    </div>
-                    <div class="flex mt-2 md:mt-0 space-x-2">
-                    </div>
-                </div>
-                <div class="space-y-4 text-sm">
-                     <div class="flex items-center p-3 rounded-lg bg-green-50">
-                        <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
-                        <div>
-                            <p class="font-semibold text-green-800">Lisbon Hotel da Baxia Check-out</p>
-                        </div>
-                    </div>
-                     <div class="flex items-center p-3 rounded-lg bg-yellow-50">
-                        <i class="fas fa-van text-yellow-500 mr-4 text-lg"></i>
-                        <div>
-                            <p class="font-semibold text-yellow-800">Van to Porto with Stops
-                                <span id="modal-link-travel1" class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2">(Details)</span>
-                            </p>
-                            <p class="text-gray-600">8:00 AM - 5:00 PM</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center p-3 rounded-lg bg-green-50">
-                        <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
-                        <div>
-                            <p class="font-semibold text-green-800">Porto Torel Palace Porto Check-in
-                                <span id="modal-link-hotel2" class="text-xs text-green-500 cursor-pointer hover:underline ml-2" onclick="showModal('Porto Torel Palace Porto Details', 'Details: All 4 under AMF<br>Confirmation #: Expedia 73038457669454')">(Details)</span>
-                            </p>
-                            <a href="https://www.torelpalaceporto.com/" target="_blank" class="text-xs text-blue-500 hover:underline ml-2">(Website)</a>
-                            <p class="text-gray-600">Check-in from August 28 - 30</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center p-3 rounded-lg bg-pink-50">
-                        <i class="fas fa-utensils text-pink-500 mr-4 text-lg"></i>
-                        <p class="font-semibold text-pink-800">Dinner at The Door Rua das Taipas</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Day 6: Friday, August 29 -->
-            <div class="bg-white rounded-2xl shadow-lg p-6">
-                <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
-                    <div class="flex-grow">
-                        <h3 class="text-2xl font-bold text-gray-900">Friday, August 29 - Porto</h3>
-                    </div>
-                    <div class="flex mt-2 md:mt-0 space-x-2">
-                    </div>
-                </div>
-                <div class="space-y-4 text-sm">
-                     <div class="flex items-center p-3 rounded-lg bg-yellow-50">
-                        <i class="fas fa-wine-bottle text-yellow-500 mr-4 text-lg"></i>
-                        <p class="font-semibold text-yellow-800">Amit Tour Douro Valley</p>
-                    </div>
-                    <div class="flex items-center p-3 rounded-lg bg-pink-50">
-                        <i class="fas fa-utensils text-pink-500 mr-4 text-lg"></i>
-                        <p class="font-semibold text-pink-800">Private Dinner at 7:30 PM</p>
-                    </div>
-                </div>
-            </div>
-            
-             <!-- Day 7: Saturday, August 30 -->
-            <div class="bg-white rounded-2xl shadow-lg p-6">
-                <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
-                    <div class="flex-grow">
-                        <h3 class="text-2xl font-bold text-gray-900">Saturday, August 30 - Travel to Azores</h3>
-                    </div>
-                    <div class="flex mt-2 md:mt-0 space-x-2">
-                    </div>
-                </div>
-                <div class="space-y-4 text-sm">
-                    <div class="flex items-center p-3 rounded-lg bg-green-50">
-                        <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
-                        <p class="font-semibold text-green-800">Porto Torel Palace Porto Check-out</p>
-                    </div>
-                    <div class="flex items-center p-3 rounded-lg bg-yellow-50">
-                        <i class="fas fa-walking text-yellow-500 mr-4 text-lg"></i>
-                        <div>
-                            <p class="font-semibold text-yellow-800">Amit Tour Porto
-                                <span id="modal-link-activity4" class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2">(Details)</span>
-                            </p>
-                            <p class="text-gray-600">10:00 AM - 3:00 PM</p>
-                        </div>
-                    </div>
-                     <div class="flex items-center p-3 rounded-lg bg-blue-50">
-                        <i class="fas fa-plane-departure text-blue-500 mr-4 text-lg"></i>
-                        <div>
-                            <p class="font-semibold text-blue-800">Flight: SATA S40173 (LIS-Azores)
-                                <span id="modal-link-flight3" class="text-xs text-blue-500 cursor-pointer hover:underline ml-2">(Details)</span>
-                            </p>
-                            <p class="text-gray-600">Departure: 7:35 PM, Arrival: 9:00 PM</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center p-3 rounded-lg bg-green-50">
-                        <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
-                        <p class="font-semibold text-green-800">Azores Hotel Check-in
-                            <span id="modal-link-hotel3" class="text-xs text-green-500 cursor-pointer hover:underline ml-2">(Details)</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Day 8 - 13: August 30 - September 4 -->
-            <div class="bg-white rounded-2xl shadow-lg p-6">
-                <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
-                    <div class="flex-grow">
-                        <h3 class="text-2xl font-bold text-gray-900">Saturday, August 30 - Thursday, September 4</h3>
-                    </div>
-                    <div class="flex mt-2 md:mt-0 space-x-2">
-                    </div>
-                </div>
-                <div class="space-y-4 text-sm">
-                    <div class="flex items-center p-3 rounded-lg bg-purple-50">
-                        <i class="fas fa-road text-purple-500 mr-4 text-lg"></i>
-                        <p class="font-semibold text-purple-800">Backroads Activities</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Day 14: Friday, September 5 -->
-            <div class="bg-white rounded-2xl shadow-lg p-6">
-                <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
-                    <div class="flex-grow">
-                        <h3 class="text-2xl font-bold text-gray-900">Friday, September 5 - Azores</h3>
-                    </div>
-                    <div class="flex mt-2 md:mt-0 space-x-2">
-                    </div>
-                </div>
-                <div class="space-y-4 text-sm">
-                    <div class="flex items-center p-3 rounded-lg bg-green-50">
-                        <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
-                        <p class="font-semibold text-green-800">Grand Hotel Azores Atlântico
-                             <span id="modal-link-hotel4" class="text-xs text-green-500 cursor-pointer hover:underline ml-2">(Details)</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Day 15: Saturday, September 6 -->
-            <div class="bg-white rounded-2xl shadow-lg p-6">
-                <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-4">
-                    <div class="flex-grow">
-                        <h3 class="text-2xl font-bold text-gray-900">Saturday, September 6 - Departure</h3>
-                    </div>
-                    <div class="flex mt-2 md:mt-0 space-x-2">
-                    </div>
-                </div>
-                <div class="space-y-4 text-sm">
-                    <div class="flex items-center p-3 rounded-lg bg-green-50">
-                        <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
-                        <p class="font-semibold text-green-800">Azores Hotel Check-out</p>
-                    </div>
-                    <div class="flex items-center p-3 rounded-lg bg-blue-50">
-                        <i class="fas fa-plane-departure text-blue-500 mr-4 text-lg"></i>
-                        <div>
-                            <p class="font-semibold text-blue-800">Flight: SATA S40283 (Azores-BOS)
-                                 <span id="modal-link-flight4" class="text-xs text-blue-500 cursor-pointer hover:underline ml-2">(Details)</span>
-                            </p>
-                            <p class="text-gray-600">Departure: 8:35 AM, Arrival: 10:20 AM</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center p-3 rounded-lg bg-blue-50">
-                        <i class="fas fa-plane-departure text-blue-500 mr-4 text-lg"></i>
-                        <div>
-                            <p class="font-semibold text-blue-800">Flight: Delta DL2222 (BOS-DTW)
-                                <span id="modal-link-flight5" class="text-xs text-blue-500 cursor-pointer hover:underline ml-2">(Details)</span>
-                            </p>
-                            <p class="text-gray-600">Departure: 12:55 PM, Arrival: 3:05 PM</p>
-                        </div>
-                    </div>
-                </div>
+            <!-- AI Suggestions Section -->
+            <div id="ai-suggestions-container" class="mt-8">
+                <!-- This section will be populated by AI suggestions -->
             </div>
         </div>
 
-        <!-- AI Suggestions Section -->
-        <div id="ai-suggestions-container" class="mt-8">
-            <!-- This section will be populated by AI suggestions -->
-        </div>
-    </div>
-
-    <!-- The Modal Container -->
-    <div id="modal-container" class="hidden modal">
-        <div class="modal-content">
-            <div class="flex justify-between items-center mb-4">
-                <h3 id="modal-title" class="text-xl font-bold text-gray-900"></h3>
-                <button id="modal-close" class="text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+        <!-- The Modal Container -->
+        <div id="modal-container" class="hidden modal">
+            <div class="modal-content">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 id="modal-title" class="text-xl font-bold text-gray-900"></h3>
+                    <button id="modal-close" class="text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+                </div>
+                <div id="modal-body" class="text-gray-700"></div>
             </div>
-            <div id="modal-body" class="text-gray-700"></div>
         </div>
     </div>
 
@@ -415,13 +424,14 @@
         const modalData = {
             'modal-link-flight1': { title: 'Flight Details', content: 'Airline: Delta<br>Flight #: 1707<br>Notes: DTW-BOS' },
             'modal-link-flight2': { title: 'Flight Details', content: 'Airline: Delta<br>Flight #: 0124<br>Notes: BOS-LIS' },
-            'modal-link-hotel1': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia 73118888601825' },
+            'modal-link-hotel1': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia 73118888601825<br><br><b>Hotel Website:</b><br><a href="https://www.hoteldabaixa.com/en/" target="_blank" class="text-blue-500 hover:underline">https://www.hoteldabaixa.com/en/</a>' },
             'modal-link-activity1': { title: 'Activity Details', content: 'Notes: free cancellation' },
             'modal-link-activity2': { title: 'Activity Details', content: 'Notes: Nuno Tuk, 420 Euros' },
-            'modal-link-activity3': { title: 'Activity Details', content: 'Notes: Tour Booked' },
+            'modal-link-explore': { title: 'Open--Explore Lisbon Details', content: 'Possible places to explore: Pink & Green Streets, Arch. Note: via What\'s App' },
+            'modal-link-activity3': { title: 'Activity Details', content: 'Notes: Tour Booked with Carlos.<br>Link: <a href="https://www.premiumtours.pt/pt/tours/passeio-privado-sintra-2-2/" target="_blank" class="text-blue-500 hover:underline">https://www.premiumtours.pt/pt/tours/passeio-privado-sintra-2-2/</a>' },
             'modal-link-van1': { title: 'Van to Hotel Details', content: 'TOPTOUR PORTUGAL®<br>+351217151675<br>Booked on Trip Advisor, For other questions, contact:<br>Viator Customer Care<br>702-939-9839' },
             'modal-link-travel1': { title: 'Van to Porto Details', content: 'Notes: Aveiro, Obidos and Nazare<br>Confirmation #: AMF Deposit Paid<br><br><b>Van Contact Info:</b><br>Fernando Madeira<br>Lisbon Private Transfers<br>+351 968 376 643 WhatsApp<br>www.lisbonprivatetransfers.com<br>fernando@lisbonprivatetransfers.com' },
-            'modal-link-hotel2': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia 73038457669454' },
+            'modal-link-hotel2': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia itinerary: 73038457669454<br><br><b>Expedia Itinerary:</b><br><a href="https://www.expedia.com/trips/egti-FR2-87A-PRY9/details/NWNhNjY2NGYtZTAxOS01NDdjLTk5ZmYtZjNiMDgxMGZiYzE5O2U3ZjI3YzE5LTAwN2ItNGM0Yy04MDVjLTRiZmI3NDBkODQ3Y18wO2VnOnByb3BlcnR5OjQ2ZWRlMDBmYjg0ZjI4ZGYzNTE2ZTVmYWM1MDQ1ZDg4" target="_blank" class="text-blue-500 hover:underline">https://www.expedia.com/trips/egti-FR2-87A-PRY9/details/...</a>' },
             'modal-link-activity4': { title: 'Activity Details', content: 'Notes: Leave Bac' },
             'modal-link-flight3': { title: 'Flight Details', content: 'Airline: SATA<br>Flight #: S40173<br>Notes: LIS-Azores' },
             'modal-link-hotel3': { title: 'Accommodation Details', content: 'Details: Jenn and Kirschner on one reservation - Shefman and Singer made separate resv<br>Confirmation #: Hotels.com 72060560675386' },
