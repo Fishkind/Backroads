@@ -90,14 +90,6 @@
                         <h3 class="text-2xl font-bold text-gray-900">Sunday, August 24</h3>
                     </div>
                     <div class="flex mt-2 md:mt-0 space-x-2">
-                        <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="getAISuggestions('Lisbon', 'Arriving in Lisbon, checking into hotel, Jewish Walking Tour, dinner at ROSAMAR.')">
-                            ✨ Get AI Suggestions
-                        </button>
-                        <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="listenToItinerary('Sunday, August 24', 'Flight: Delta 1707 (DTW to BOS) departing at 5:45pm and arriving at 7:52pm. Flight: Delta 0124 (BOS to LIS) departing at 11:25pm.')">
-                            ✨ Listen to Itinerary
-                        </button>
                     </div>
                 </div>
                 <div class="space-y-4 text-sm">
@@ -105,8 +97,7 @@
                         <i class="fas fa-plane-departure text-blue-500 mr-4 text-lg"></i>
                         <div>
                             <p class="font-semibold text-blue-800">Flight: Delta 1707 (DTW-BOS) 
-                                <span class="text-xs text-blue-500 cursor-pointer hover:underline ml-2" 
-                                      onclick="showModal('Flight Details', 'Airline: Delta<br>Flight #: 1707<br>Notes: DTW-BOS')">(Details)</span>
+                                <span id="modal-link-flight1" class="text-xs text-blue-500 cursor-pointer hover:underline ml-2">(Details)</span>
                             </p>
                             <p class="text-gray-600">Departure: 5:45 PM, Arrival: 7:52 PM</p>
                         </div>
@@ -115,8 +106,7 @@
                         <i class="fas fa-plane-departure text-blue-500 mr-4 text-lg"></i>
                         <div>
                             <p class="font-semibold text-blue-800">Flight: Delta 0124 (BOS-LIS)
-                                <span class="text-xs text-blue-500 cursor-pointer hover:underline ml-2" 
-                                      onclick="showModal('Flight Details', 'Airline: Delta<br>Flight #: 0124<br>Notes: BOS-LIS')">(Details)</span>
+                                <span id="modal-link-flight2" class="text-xs text-blue-500 cursor-pointer hover:underline ml-2">(Details)</span>
                             </p>
                             <p class="text-gray-600">Departure: 11:25 PM</p>
                         </div>
@@ -131,14 +121,6 @@
                         <h3 class="text-2xl font-bold text-gray-900">Monday, August 25 - Lisbon</h3>
                     </div>
                     <div class="flex mt-2 md:mt-0 space-x-2">
-                        <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="getAISuggestions('Lisbon', 'Arriving in Lisbon, checking into hotel, Jewish Walking Tour, dinner at ROSAMAR.')">
-                            ✨ Get AI Suggestions
-                        </button>
-                        <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="listenToItinerary('Monday, August 25', 'Arrival in Lisbon at 10:45am. Check-in at Lisbon Hotel da Baxia. Jewish Walking Tour from 5pm to 7pm. Dinner at ROSAMAR Rua da Rosa.')">
-                            ✨ Listen to Itinerary
-                        </button>
                     </div>
                 </div>
                 <div class="space-y-4 text-sm">
@@ -153,8 +135,7 @@
                         <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
                         <div>
                             <p class="font-semibold text-green-800">Lisbon Hotel da Baxia Check-in
-                                <span class="text-xs text-green-500 cursor-pointer hover:underline ml-2" 
-                                      onclick="showModal('Accommodation Details', 'Details: All 4 under AMF<br>Confirmation #: Expedia 73118888601825')">(Details)</span>
+                                <span id="modal-link-hotel1" class="text-xs text-green-500 cursor-pointer hover:underline ml-2">(Details)</span>
                             </p>
                             <p class="text-gray-600">Check-in from August 25 - 28</p>
                         </div>
@@ -163,8 +144,7 @@
                         <i class="fas fa-walking text-yellow-500 mr-4 text-lg"></i>
                         <div>
                             <p class="font-semibold text-yellow-800">Jewish Walking Tour
-                                <span class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2" 
-                                      onclick="showModal('Activity Details', 'Notes: free cancellation')">(Details)</span>
+                                <span id="modal-link-activity1" class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2">(Details)</span>
                             </p>
                             <p class="text-gray-600">5:00 PM - 7:00 PM</p>
                         </div>
@@ -183,14 +163,6 @@
                         <h3 class="text-2xl font-bold text-gray-900">Tuesday, August 26 - Lisbon</h3>
                     </div>
                     <div class="flex mt-2 md:mt-0 space-x-2">
-                        <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="getAISuggestions('Lisbon', 'Tuk Tuk tour, exploring Pink & Green Streets, dinner at Frou Frou JNCQUOIAv.')">
-                            ✨ Get AI Suggestions
-                        </button>
-                        <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="listenToItinerary('Tuesday, August 26', 'Tuk Tuk Tour at 10am. Explore Pink and Green Streets and the Arch. Dinner at Frou Frou JNCQUOIAv.')">
-                            ✨ Listen to Itinerary
-                        </button>
                     </div>
                 </div>
                 <div class="space-y-4 text-sm">
@@ -198,8 +170,7 @@
                         <i class="fas fa-bicycle text-yellow-500 mr-4 text-lg"></i>
                         <div>
                             <p class="font-semibold text-yellow-800">Tuk Tuk Tour
-                                <span class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2" 
-                                      onclick="showModal('Activity Details', 'Notes: Nuno Tuk, 420 Euros')">(Details)</span>
+                                <span id="modal-link-activity2" class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2">(Details)</span>
                             </p>
                             <p class="text-gray-600">Starts at 10:00 AM</p>
                         </div>
@@ -222,22 +193,13 @@
                         <h3 class="text-2xl font-bold text-gray-900">Wednesday, August 27 - Lisbon</h3>
                     </div>
                     <div class="flex mt-2 md:mt-0 space-x-2">
-                        <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="getAISuggestions('Lisbon', 'Full day Sintra tour, dinner at Lumi Rooftop Restaurant.')">
-                            ✨ Get AI Suggestions
-                        </button>
-                        <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="listenToItinerary('Wednesday, August 27', 'Sintra tour all day. Dinner at Lumi Rooftop Restaurant.')">
-                            ✨ Listen to Itinerary
-                        </button>
                     </div>
                 </div>
                 <div class="space-y-4 text-sm">
                     <div class="flex items-center p-3 rounded-lg bg-yellow-50">
                         <i class="fas fa-castle text-yellow-500 mr-4 text-lg"></i>
                         <p class="font-semibold text-yellow-800">Sintra Tour (All Day)
-                             <span class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2" 
-                                      onclick="showModal('Activity Details', 'Notes: Tour Booked')">(Details)</span>
+                             <span id="modal-link-activity3" class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2">(Details)</span>
                         </p>
                     </div>
                     <div class="flex items-center p-3 rounded-lg bg-pink-50">
@@ -254,14 +216,6 @@
                         <h3 class="text-2xl font-bold text-gray-900">Thursday, August 28 - Travel to Porto</h3>
                     </div>
                     <div class="flex mt-2 md:mt-0 space-x-2">
-                        <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="getAISuggestions('Porto', 'Van travel from Lisbon to Porto with stops, check into new hotel, dinner at The Door.')">
-                            ✨ Get AI Suggestions
-                        </button>
-                        <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="listenToItinerary('Thursday, August 28', 'Check-out from Lisbon Hotel da Baxia. Van to Porto with stops from 8am to 5pm. Check-in to Porto Torel Palace Porto. Dinner at The Door Rua das Taipas.')">
-                            ✨ Listen to Itinerary
-                        </button>
                     </div>
                 </div>
                 <div class="space-y-4 text-sm">
@@ -275,8 +229,7 @@
                         <i class="fas fa-van text-yellow-500 mr-4 text-lg"></i>
                         <div>
                             <p class="font-semibold text-yellow-800">Van to Porto with Stops
-                                <span class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2" 
-                                      onclick="showModal('Travel Details', 'Notes: Aveiro, Obidos and Nazare<br>Confirmation #: AMF Deposit Paid')">(Details)</span>
+                                <span id="modal-link-travel1" class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2">(Details)</span>
                             </p>
                             <p class="text-gray-600">8:00 AM - 5:00 PM</p>
                         </div>
@@ -285,8 +238,7 @@
                         <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
                         <div>
                             <p class="font-semibold text-green-800">Porto Torel Palace Porto Check-in
-                                <span class="text-xs text-green-500 cursor-pointer hover:underline ml-2" 
-                                      onclick="showModal('Accommodation Details', 'Details: All 4 under AMF<br>Confirmation #: Expedia 73038457669454')">(Details)</span>
+                                <span id="modal-link-hotel2" class="text-xs text-green-500 cursor-pointer hover:underline ml-2">(Details)</span>
                             </p>
                             <p class="text-gray-600">Check-in from August 28 - 30</p>
                         </div>
@@ -305,14 +257,6 @@
                         <h3 class="text-2xl font-bold text-gray-900">Friday, August 29 - Porto</h3>
                     </div>
                     <div class="flex mt-2 md:mt-0 space-x-2">
-                        <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="getAISuggestions('Porto', 'Douro Valley tour, private dinner.')">
-                            ✨ Get AI Suggestions
-                        </button>
-                        <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="listenToItinerary('Friday, August 29', 'Amit Tour Douro Valley. Private dinner at 7:30pm.')">
-                            ✨ Listen to Itinerary
-                        </button>
                     </div>
                 </div>
                 <div class="space-y-4 text-sm">
@@ -334,14 +278,6 @@
                         <h3 class="text-2xl font-bold text-gray-900">Saturday, August 30 - Travel to Azores</h3>
                     </div>
                     <div class="flex mt-2 md:mt-0 space-x-2">
-                        <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="getAISuggestions('Azores', 'Porto tour, travel to airport, flight to Azores, check into new hotel.')">
-                            ✨ Get AI Suggestions
-                        </button>
-                        <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="listenToItinerary('Saturday, August 30', 'Check-out from Porto Torel Palace Porto. Amit Tour Porto from 10am to 3pm. Flight: SATA S40173 (LIS to Azores) departing at 7:35pm and arriving at 9pm. Check-in to Azores Hotel.')">
-                            ✨ Listen to Itinerary
-                        </button>
                     </div>
                 </div>
                 <div class="space-y-4 text-sm">
@@ -353,8 +289,7 @@
                         <i class="fas fa-walking text-yellow-500 mr-4 text-lg"></i>
                         <div>
                             <p class="font-semibold text-yellow-800">Amit Tour Porto
-                                <span class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2" 
-                                      onclick="showModal('Activity Details', 'Notes: Leave Bac')">(Details)</span>
+                                <span id="modal-link-activity4" class="text-xs text-yellow-500 cursor-pointer hover:underline ml-2">(Details)</span>
                             </p>
                             <p class="text-gray-600">10:00 AM - 3:00 PM</p>
                         </div>
@@ -363,8 +298,7 @@
                         <i class="fas fa-plane-departure text-blue-500 mr-4 text-lg"></i>
                         <div>
                             <p class="font-semibold text-blue-800">Flight: SATA S40173 (LIS-Azores)
-                                <span class="text-xs text-blue-500 cursor-pointer hover:underline ml-2" 
-                                      onclick="showModal('Flight Details', 'Airline: SATA<br>Flight #: S40173<br>Notes: LIS-Azores')">(Details)</span>
+                                <span id="modal-link-flight3" class="text-xs text-blue-500 cursor-pointer hover:underline ml-2">(Details)</span>
                             </p>
                             <p class="text-gray-600">Departure: 7:35 PM, Arrival: 9:00 PM</p>
                         </div>
@@ -372,8 +306,7 @@
                     <div class="flex items-center p-3 rounded-lg bg-green-50">
                         <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
                         <p class="font-semibold text-green-800">Azores Hotel Check-in
-                            <span class="text-xs text-green-500 cursor-pointer hover:underline ml-2" 
-                                      onclick="showModal('Accommodation Details', 'Details: Jenn and Kirschner on one reservation - Shefman and Singer made separate resv<br>Confirmation #: Hotels.com 72060560675386')">(Details)</span>
+                            <span id="modal-link-hotel3" class="text-xs text-green-500 cursor-pointer hover:underline ml-2">(Details)</span>
                         </p>
                     </div>
                 </div>
@@ -386,14 +319,6 @@
                         <h3 class="text-2xl font-bold text-gray-900">Saturday, August 30 - Thursday, September 4</h3>
                     </div>
                     <div class="flex mt-2 md:mt-0 space-x-2">
-                         <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="getAISuggestions('Azores', 'Backroads activities.')">
-                            ✨ Get AI Suggestions
-                        </button>
-                        <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="listenToItinerary('Azores Activities', 'Backroads Activities from August 30th to September 4th.')">
-                            ✨ Listen to Itinerary
-                        </button>
                     </div>
                 </div>
                 <div class="space-y-4 text-sm">
@@ -411,22 +336,13 @@
                         <h3 class="text-2xl font-bold text-gray-900">Friday, September 5 - Azores</h3>
                     </div>
                     <div class="flex mt-2 md:mt-0 space-x-2">
-                        <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="getAISuggestions('Azores', 'Check into hotel for last night.')">
-                            ✨ Get AI Suggestions
-                        </button>
-                        <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="listenToItinerary('Friday, September 5', 'Check-in to Azores Hotel for the last day.')">
-                            ✨ Listen to Itinerary
-                        </button>
                     </div>
                 </div>
                 <div class="space-y-4 text-sm">
                     <div class="flex items-center p-3 rounded-lg bg-green-50">
                         <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
                         <p class="font-semibold text-green-800">Azores Hotel Check-in for Last Day
-                             <span class="text-xs text-green-500 cursor-pointer hover:underline ml-2" 
-                                      onclick="showModal('Accommodation Details', 'Details: All 4 under AMF<br>Confirmation #: Expedia 72064522526321')">(Details)</span>
+                             <span id="modal-link-hotel4" class="text-xs text-green-500 cursor-pointer hover:underline ml-2">(Details)</span>
                         </p>
                     </div>
                 </div>
@@ -439,14 +355,6 @@
                         <h3 class="text-2xl font-bold text-gray-900">Saturday, September 6 - Departure</h3>
                     </div>
                     <div class="flex mt-2 md:mt-0 space-x-2">
-                        <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="getAISuggestions('Azores', 'Checking out of hotel, flying to Boston and then to Detroit.')">
-                            ✨ Get AI Suggestions
-                        </button>
-                        <button class="ai-button bg-purple-500 text-white text-xs font-bold py-2 px-4 rounded-full transition-all duration-200 hover:bg-purple-600"
-                            onclick="listenToItinerary('Saturday, September 6', 'Check-out from Azores Hotel. Flight: SATA S40283 (Azores to BOS) departing at 8:35am. Flight: Delta DL2222 (BOS to DTW) departing at 12:55pm.')">
-                            ✨ Listen to Itinerary
-                        </button>
                     </div>
                 </div>
                 <div class="space-y-4 text-sm">
@@ -458,8 +366,7 @@
                         <i class="fas fa-plane-departure text-blue-500 mr-4 text-lg"></i>
                         <div>
                             <p class="font-semibold text-blue-800">Flight: SATA S40283 (Azores-BOS)
-                                 <span class="text-xs text-blue-500 cursor-pointer hover:underline ml-2" 
-                                      onclick="showModal('Flight Details', 'Airline: SATA<br>Flight #: S40283<br>Notes: Azores-BOS')">(Details)</span>
+                                 <span id="modal-link-flight4" class="text-xs text-blue-500 cursor-pointer hover:underline ml-2">(Details)</span>
                             </p>
                             <p class="text-gray-600">Departure: 8:35 AM, Arrival: 10:20 AM</p>
                         </div>
@@ -468,8 +375,7 @@
                         <i class="fas fa-plane-departure text-blue-500 mr-4 text-lg"></i>
                         <div>
                             <p class="font-semibold text-blue-800">Flight: Delta DL2222 (BOS-DTW)
-                                <span class="text-xs text-blue-500 cursor-pointer hover:underline ml-2" 
-                                      onclick="showModal('Flight Details', 'Airline: Delta<br>Flight #: DL2222<br>Notes: BOS-DTW')">(Details)</span>
+                                <span id="modal-link-flight5" class="text-xs text-blue-500 cursor-pointer hover:underline ml-2">(Details)</span>
                             </p>
                             <p class="text-gray-600">Departure: 12:55 PM, Arrival: 3:05 PM</p>
                         </div>
@@ -489,73 +395,47 @@
         <div class="modal-content">
             <div class="flex justify-between items-center mb-4">
                 <h3 id="modal-title" class="text-xl font-bold text-gray-900"></h3>
-                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+                <button id="modal-close" class="text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
             </div>
             <div id="modal-body" class="text-gray-700"></div>
         </div>
     </div>
 
     <script>
-        /**
-         * The function to get AI-powered suggestions for a given location and activities.
-         * @param {string} city - The city for which to get suggestions (e.g., 'Lisbon', 'Porto').
-         * @param {string} currentActivities - A brief description of the day's scheduled activities.
-         */
-        async function getAISuggestions(city, currentActivities) {
-            const container = document.getElementById('ai-suggestions-container');
-            container.innerHTML = `<div class="p-6 bg-white rounded-2xl shadow-lg">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">AI Suggestions for ${city} ✨</h2>
-                <div class="flex items-center justify-center p-4">
-                    <div class="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-purple-500"></div>
-                    <span class="ml-4 text-gray-500">Generating suggestions...</span>
-                </div>
-            </div>`;
+        const modalData = {
+            'modal-link-flight1': { title: 'Flight Details', content: 'Airline: Delta<br>Flight #: 1707<br>Notes: DTW-BOS' },
+            'modal-link-flight2': { title: 'Flight Details', content: 'Airline: Delta<br>Flight #: 0124<br>Notes: BOS-LIS' },
+            'modal-link-hotel1': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia 73118888601825' },
+            'modal-link-activity1': { title: 'Activity Details', content: 'Notes: free cancellation' },
+            'modal-link-activity2': { title: 'Activity Details', content: 'Notes: Nuno Tuk, 420 Euros' },
+            'modal-link-activity3': { title: 'Activity Details', content: 'Notes: Tour Booked' },
+            'modal-link-travel1': { title: 'Travel Details', content: 'Notes: Aveiro, Obidos and Nazare<br>Confirmation #: AMF Deposit Paid' },
+            'modal-link-hotel2': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia 73038457669454' },
+            'modal-link-activity4': { title: 'Activity Details', content: 'Notes: Leave Bac' },
+            'modal-link-flight3': { title: 'Flight Details', content: 'Airline: SATA<br>Flight #: S40173<br>Notes: LIS-Azores' },
+            'modal-link-hotel3': { title: 'Accommodation Details', content: 'Details: Jenn and Kirschner on one reservation - Shefman and Singer made separate resv<br>Confirmation #: Hotels.com 72060560675386' },
+            'modal-link-hotel4': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia 72064522526321' },
+            'modal-link-flight4': { title: 'Flight Details', content: 'Airline: SATA<br>Flight #: S40283<br>Notes: Azores-BOS' },
+            'modal-link-flight5': { title: 'Flight Details', content: 'Airline: Delta<br>Flight #: DL2222<br>Notes: BOS-DTW' }
+        };
 
-            const prompt = `You are a helpful travel assistant. Based on the following trip details, suggest 3-5 quick, fun, or interesting activities or restaurants in ${city}. Focus on local favorites or hidden gems that a tourist might not find easily. The planned activities for this day are: "${currentActivities}".
-            
-            Please format your response as a simple list of suggestions, one per line. Do not include any introductory or concluding sentences.`;
-
-            const payload = {
-                contents: [{
-                    parts: [{ text: prompt }]
-                }],
-                generationConfig: {
-                    responseMimeType: "text/plain",
-                },
-            };
-            const apiKey = "";
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-
-            try {
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                if (!response.ok) {
-                    throw new Error(`API error: ${response.status} ${response.statusText}`);
+        document.addEventListener('DOMContentLoaded', () => {
+            // Attach event listeners for modal links
+            Object.keys(modalData).forEach(id => {
+                const link = document.getElementById(id);
+                if (link) {
+                    link.addEventListener('click', () => showModal(modalData[id].title, modalData[id].content));
                 }
+            });
 
-                const result = await response.json();
-                const text = result?.candidates?.[0]?.content?.parts?.[0]?.text || "No suggestions found.";
-
-                const suggestionsList = text.split('\n').filter(line => line.trim() !== '');
-                const suggestionsHtml = suggestionsList.map(item => `<li class="mb-2 p-2 bg-purple-50 rounded-lg">${item.trim()}</li>`).join('');
-
-                container.innerHTML = `<div class="p-6 bg-white rounded-2xl shadow-lg">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">AI Suggestions for ${city} ✨</h2>
-                    <ul class="list-disc ml-6 space-y-2 text-gray-700">
-                        ${suggestionsHtml}
-                    </ul>
-                </div>`;
-            } catch (error) {
-                console.error("Failed to fetch AI suggestions:", error);
-                container.innerHTML = `<div class="p-6 bg-red-100 rounded-2xl shadow-lg text-red-800">
-                    <p>Sorry, an error occurred while generating suggestions. Please try again.</p>
-                </div>`;
-            }
-        }
+            // Attach event listener for modal close button
+            document.getElementById('modal-close').addEventListener('click', closeModal);
+            document.getElementById('modal-container').addEventListener('click', (e) => {
+                if (e.target.id === 'modal-container') {
+                    closeModal();
+                }
+            });
+        });
 
         // Function to show the modal with custom content
         function showModal(title, content) {
@@ -573,132 +453,6 @@
             const modalContainer = document.getElementById('modal-container');
             modalContainer.classList.add('hidden');
         }
-
-        // Helper function to convert base64 to ArrayBuffer
-        function base64ToArrayBuffer(base64) {
-            const binaryString = atob(base64);
-            const len = binaryString.length;
-            const bytes = new Uint8Array(len);
-            for (let i = 0; i < len; i++) {
-                bytes[i] = binaryString.charCodeAt(i);
-            }
-            return bytes.buffer;
-        }
-
-        // Helper function to convert PCM data to WAV blob
-        function pcmToWav(pcmData, sampleRate) {
-            const dataView = new DataView(new ArrayBuffer(44 + pcmData.length * 2));
-            let offset = 0;
-
-            function writeString(str) {
-                for (let i = 0; i < str.length; i++) {
-                    dataView.setUint8(offset + i, str.charCodeAt(i));
-                }
-                offset += str.length;
-            }
-
-            function writeUint32(val) {
-                dataView.setUint32(offset, val, true);
-                offset += 4;
-            }
-
-            function writeUint16(val) {
-                dataView.setUint16(offset, val, true);
-                offset += 2;
-            }
-
-            // RIFF header
-            writeString('RIFF');
-            writeUint32(36 + pcmData.length * 2);
-            writeString('WAVE');
-
-            // fmt chunk
-            writeString('fmt ');
-            writeUint32(16);
-            writeUint16(1); // PCM format
-            writeUint16(1); // Mono
-            writeUint32(sampleRate);
-            writeUint32(sampleRate * 2); // Byte rate
-            writeUint16(2); // Block align
-            writeUint16(16); // Bits per sample
-
-            // data chunk
-            writeString('data');
-            writeUint32(pcmData.length * 2);
-            
-            for (let i = 0; i < pcmData.length; i++, offset += 2) {
-                dataView.setInt16(offset, pcmData[i], true);
-            }
-
-            return new Blob([dataView], { type: 'audio/wav' });
-        }
-
-        /**
-         * The function to get AI-powered text-to-speech for a given day's itinerary.
-         * @param {string} day - The day of the week and date (e.g., 'Monday, August 25').
-         * @param {string} itineraryText - A summary of the day's activities.
-         */
-        async function listenToItinerary(day, itineraryText) {
-            const currentButton = event.target;
-            const originalButtonText = currentButton.innerHTML;
-            currentButton.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Loading...`;
-            currentButton.disabled = true;
-
-            const prompt = `Say in a clear and friendly voice: ${day}. ${itineraryText}`;
-
-            const payload = {
-                contents: [{
-                    parts: [{ text: prompt }]
-                }],
-                generationConfig: {
-                    responseModalities: ["AUDIO"],
-                    speechConfig: {
-                        voiceConfig: {
-                            prebuiltVoiceConfig: { voiceName: "Kore" }
-                        }
-                    }
-                },
-                model: "gemini-2.5-flash-preview-tts"
-            };
-
-            const apiKey = ""; // Canvas will provide this
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
-
-            try {
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-                const result = await response.json();
-                const part = result?.candidates?.[0]?.content?.parts?.[0];
-                const audioData = part?.inlineData?.data;
-                const mimeType = part?.inlineData?.mimeType;
-
-                if (audioData && mimeType && mimeType.startsWith("audio/")) {
-                    // API returns L16 (signed 16-bit PCM)
-                    const sampleRate = parseInt(mimeType.match(/rate=(\d+)/)[1], 10);
-                    const pcmData = base64ToArrayBuffer(audioData);
-                    const pcm16 = new Int16Array(pcmData);
-                    const wavBlob = pcmToWav(pcm16, sampleRate);
-                    const audioUrl = URL.createObjectURL(wavBlob);
-                    
-                    const audio = new Audio(audioUrl);
-                    audio.play();
-                } else {
-                    console.error("Failed to get valid audio data from API response.");
-                    alert("Sorry, there was an issue generating the audio. Please try again.");
-                }
-
-            } catch (error) {
-                console.error("Error during TTS API call:", error);
-                alert("An error occurred. Please check your network connection and try again.");
-            } finally {
-                currentButton.innerHTML = originalButtonText;
-                currentButton.disabled = false;
-            }
-        }
-
     </script>
 </body>
 </html>
