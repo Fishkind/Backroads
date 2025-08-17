@@ -131,12 +131,21 @@
                             <p class="text-gray-600">Arrival in Lisbon: 10:45 AM</p>
                         </div>
                     </div>
+                    <div class="flex items-center p-3 rounded-lg bg-blue-50">
+                        <i class="fas fa-shuttle-van text-blue-500 mr-4 text-lg"></i>
+                        <div>
+                            <p class="font-semibold text-blue-800">Private Van to Hotel de Baxia
+                                <span id="modal-link-van1" class="text-xs text-blue-500 cursor-pointer hover:underline ml-2">(Details)</span>
+                            </p>
+                        </div>
+                    </div>
                     <div class="flex items-center p-3 rounded-lg bg-green-50">
                         <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
                         <div>
                             <p class="font-semibold text-green-800">Lisbon Hotel da Baxia Check-in
-                                <span id="modal-link-hotel1" class="text-xs text-green-500 cursor-pointer hover:underline ml-2">(Details)</span>
+                                <span class="text-xs text-green-500 cursor-pointer hover:underline ml-2" onclick="showModal('Hotel de Baxia Details', 'Details: All 4 under AMF<br>Confirmation #: Expedia 73118888601825')">(Details)</span>
                             </p>
+                            <a href="https://www.hoteldabaixa.com/en/" target="_blank" class="text-xs text-blue-500 hover:underline ml-2">(Website)</a>
                             <p class="text-gray-600">Check-in from August 25 - 28</p>
                         </div>
                     </div>
@@ -238,8 +247,9 @@
                         <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
                         <div>
                             <p class="font-semibold text-green-800">Porto Torel Palace Porto Check-in
-                                <span id="modal-link-hotel2" class="text-xs text-green-500 cursor-pointer hover:underline ml-2">(Details)</span>
+                                <span id="modal-link-hotel2" class="text-xs text-green-500 cursor-pointer hover:underline ml-2" onclick="showModal('Porto Torel Palace Porto Details', 'Details: All 4 under AMF<br>Confirmation #: Expedia 73038457669454')">(Details)</span>
                             </p>
+                            <a href="https://www.torelpalaceporto.com/" target="_blank" class="text-xs text-blue-500 hover:underline ml-2">(Website)</a>
                             <p class="text-gray-600">Check-in from August 28 - 30</p>
                         </div>
                     </div>
@@ -322,9 +332,9 @@
                     </div>
                 </div>
                 <div class="space-y-4 text-sm">
-                    <div class="flex items-center p-3 rounded-lg bg-yellow-50">
-                        <i class="fas fa-road text-yellow-500 mr-4 text-lg"></i>
-                        <p class="font-semibold text-yellow-800">Backroads Activities</p>
+                    <div class="flex items-center p-3 rounded-lg bg-purple-50">
+                        <i class="fas fa-road text-purple-500 mr-4 text-lg"></i>
+                        <p class="font-semibold text-purple-800">Backroads Activities</p>
                     </div>
                 </div>
             </div>
@@ -341,7 +351,7 @@
                 <div class="space-y-4 text-sm">
                     <div class="flex items-center p-3 rounded-lg bg-green-50">
                         <i class="fas fa-hotel text-green-500 mr-4 text-lg"></i>
-                        <p class="font-semibold text-green-800">Azores Hotel Check-in for Last Day
+                        <p class="font-semibold text-green-800">Grand Hotel Azores Atlântico
                              <span id="modal-link-hotel4" class="text-xs text-green-500 cursor-pointer hover:underline ml-2">(Details)</span>
                         </p>
                     </div>
@@ -409,12 +419,13 @@
             'modal-link-activity1': { title: 'Activity Details', content: 'Notes: free cancellation' },
             'modal-link-activity2': { title: 'Activity Details', content: 'Notes: Nuno Tuk, 420 Euros' },
             'modal-link-activity3': { title: 'Activity Details', content: 'Notes: Tour Booked' },
-            'modal-link-travel1': { title: 'Travel Details', content: 'Notes: Aveiro, Obidos and Nazare<br>Confirmation #: AMF Deposit Paid' },
+            'modal-link-van1': { title: 'Van to Hotel Details', content: 'TOPTOUR PORTUGAL®<br>+351217151675<br>Booked on Trip Advisor, For other questions, contact:<br>Viator Customer Care<br>702-939-9839' },
+            'modal-link-travel1': { title: 'Van to Porto Details', content: 'Notes: Aveiro, Obidos and Nazare<br>Confirmation #: AMF Deposit Paid<br><br><b>Van Contact Info:</b><br>Fernando Madeira<br>Lisbon Private Transfers<br>+351 968 376 643 WhatsApp<br>www.lisbonprivatetransfers.com<br>fernando@lisbonprivatetransfers.com' },
             'modal-link-hotel2': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia 73038457669454' },
             'modal-link-activity4': { title: 'Activity Details', content: 'Notes: Leave Bac' },
             'modal-link-flight3': { title: 'Flight Details', content: 'Airline: SATA<br>Flight #: S40173<br>Notes: LIS-Azores' },
             'modal-link-hotel3': { title: 'Accommodation Details', content: 'Details: Jenn and Kirschner on one reservation - Shefman and Singer made separate resv<br>Confirmation #: Hotels.com 72060560675386' },
-            'modal-link-hotel4': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia 72064522526321' },
+            'modal-link-hotel4': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia itinerary: 72064522526321' },
             'modal-link-flight4': { title: 'Flight Details', content: 'Airline: SATA<br>Flight #: S40283<br>Notes: Azores-BOS' },
             'modal-link-flight5': { title: 'Flight Details', content: 'Airline: Delta<br>Flight #: DL2222<br>Notes: BOS-DTW' }
         };
