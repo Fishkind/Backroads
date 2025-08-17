@@ -17,16 +17,11 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f4f7f9;
-            background-image: url('BRopen.JPG');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: #1a202c; /* Ensure text is readable on the background */
         }
         /* Style for the main container to ensure it's centered and has padding */
         .container {
             max-width: 80rem; /* Adjusted for better wide-screen viewing */
-            background-color: rgba(255, 255, 255, 0.8); 
+            background-color: white; 
             border-radius: 1rem;
         }
         /* Custom scrollbar for a cleaner look */
@@ -72,11 +67,43 @@
             max-height: 80%;
             overflow-y: auto;
         }
+        /* Video Intro Modal Styles */
+        .video-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+        .video-modal video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hidden-content {
+            display: none;
+        }
+        .fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
+    <!-- Video Intro Modal -->
+    <div id="video-intro-modal" class="video-modal">
+        <video id="intro-video" src="BROpen.MP4" autoplay muted playsinline></video>
+    </div>
+
     <!-- Main Content -->
-    <div id="main-content">
+    <div id="main-content" class="hidden-content">
         <div class="container mx-auto p-8 lg:p-12">
             <!-- Main Header Section -->
             <header class="text-center mb-12">
@@ -421,26 +448,50 @@
     </div>
 
     <script>
-        const modalData = {
-            'modal-link-flight1': { title: 'Flight Details', content: 'Airline: Delta<br>Flight #: 1707<br>Notes: DTW-BOS' },
-            'modal-link-flight2': { title: 'Flight Details', content: 'Airline: Delta<br>Flight #: 0124<br>Notes: BOS-LIS' },
-            'modal-link-hotel1': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia 73118888601825<br><br><b>Hotel Website:</b><br><a href="https://www.hoteldabaixa.com/en/" target="_blank" class="text-blue-500 hover:underline">https://www.hoteldabaixa.com/en/</a>' },
-            'modal-link-activity1': { title: 'Activity Details', content: 'Notes: free cancellation' },
-            'modal-link-activity2': { title: 'Activity Details', content: 'Notes: Nuno Tuk, 420 Euros' },
-            'modal-link-explore': { title: 'Open--Explore Lisbon Details', content: 'Possible places to explore: Pink & Green Streets, Arch. Note: via What\'s App' },
-            'modal-link-activity3': { title: 'Activity Details', content: 'Notes: Tour Booked with Carlos.<br>Link: <a href="https://www.premiumtours.pt/pt/tours/passeio-privado-sintra-2-2/" target="_blank" class="text-blue-500 hover:underline">https://www.premiumtours.pt/pt/tours/passeio-privado-sintra-2-2/</a>' },
-            'modal-link-van1': { title: 'Van to Hotel Details', content: 'TOPTOUR PORTUGAL®<br>+351217151675<br>Booked on Trip Advisor, For other questions, contact:<br>Viator Customer Care<br>702-939-9839' },
-            'modal-link-travel1': { title: 'Van to Porto Details', content: 'Notes: Aveiro, Obidos and Nazare<br>Confirmation #: AMF Deposit Paid<br><br><b>Van Contact Info:</b><br>Fernando Madeira<br>Lisbon Private Transfers<br>+351 968 376 643 WhatsApp<br>www.lisbonprivatetransfers.com<br>fernando@lisbonprivatetransfers.com' },
-            'modal-link-hotel2': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia itinerary: 73038457669454<br><br><b>Expedia Itinerary:</b><br><a href="https://www.expedia.com/trips/egti-FR2-87A-PRY9/details/NWNhNjY2NGYtZTAxOS01NDdjLTk5ZmYtZjNiMDgxMGZiYzE5O2U3ZjI3YzE5LTAwN2ItNGM0Yy04MDVjLTRiZmI3NDBkODQ3Y18wO2VnOnByb3BlcnR5OjQ2ZWRlMDBmYjg0ZjI4ZGYzNTE2ZTVmYWM1MDQ1ZDg4" target="_blank" class="text-blue-500 hover:underline">https://www.expedia.com/trips/egti-FR2-87A-PRY9/details/...</a>' },
-            'modal-link-activity4': { title: 'Activity Details', content: 'Notes: Leave Bac' },
-            'modal-link-flight3': { title: 'Flight Details', content: 'Airline: SATA<br>Flight #: S40173<br>Notes: LIS-Azores' },
-            'modal-link-hotel3': { title: 'Accommodation Details', content: 'Details: Jenn and Kirschner on one reservation - Shefman and Singer made separate resv<br>Confirmation #: Hotels.com 72060560675386' },
-            'modal-link-hotel4': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia itinerary: 72064522526321' },
-            'modal-link-flight4': { title: 'Flight Details', content: 'Airline: SATA<br>Flight #: S40283<br>Notes: Azores-BOS' },
-            'modal-link-flight5': { title: 'Flight Details', content: 'Airline: Delta<br>Flight #: DL2222<br>Notes: BOS-DTW' }
-        };
-
         document.addEventListener('DOMContentLoaded', () => {
+            const videoModal = document.getElementById('video-intro-modal');
+            const video = document.getElementById('intro-video');
+            const mainContent = document.getElementById('main-content');
+            
+            // This event listener handles the transition once the video has finished playing
+            video.addEventListener('ended', () => {
+                videoModal.classList.add('fade-out');
+                setTimeout(() => {
+                    videoModal.style.display = 'none';
+                    mainContent.classList.remove('hidden-content');
+                }, 1000); // This timeout matches the CSS transition duration
+            });
+
+            // Fallback in case the video fails to autoplay or is paused
+            setTimeout(() => {
+                if (!video.ended) {
+                    videoModal.classList.add('fade-out');
+                    setTimeout(() => {
+                        videoModal.style.display = 'none';
+                        mainContent.classList.remove('hidden-content');
+                    }, 1000);
+                }
+            }, 2000); // 2-second timeout
+
+            const modalData = {
+                'modal-link-flight1': { title: 'Flight Details', content: 'Airline: Delta<br>Flight #: 1707<br>Notes: DTW-BOS' },
+                'modal-link-flight2': { title: 'Flight Details', content: 'Airline: Delta<br>Flight #: 0124<br>Notes: BOS-LIS' },
+                'modal-link-hotel1': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia 73118888601825<br><br><b>Hotel Website:</b><br><a href="https://www.hoteldabaixa.com/en/" target="_blank" class="text-blue-500 hover:underline">https://www.hoteldabaixa.com/en/</a>' },
+                'modal-link-activity1': { title: 'Activity Details', content: 'Notes: free cancellation' },
+                'modal-link-activity2': { title: 'Activity Details', content: 'Notes: Nuno Tuk, 420 Euros' },
+                'modal-link-explore': { title: 'Open--Explore Lisbon Details', content: 'Possible places to explore: Pink & Green Streets, Arch. Note: via What\'s App' },
+                'modal-link-activity3': { title: 'Activity Details', content: 'Notes: Tour Booked with Carlos.<br>Link: <a href="https://www.premiumtours.pt/pt/tours/passeio-privado-sintra-2-2/" target="_blank" class="text-blue-500 hover:underline">https://www.premiumtours.pt/pt/tours/passeio-privado-sintra-2-2/</a>' },
+                'modal-link-van1': { title: 'Van to Hotel Details', content: 'TOPTOUR PORTUGAL®<br>+351217151675<br>Booked on Trip Advisor, For other questions, contact:<br>Viator Customer Care<br>702-939-9839' },
+                'modal-link-travel1': { title: 'Van to Porto Details', content: 'Notes: Aveiro, Obidos and Nazare<br>Confirmation #: AMF Deposit Paid<br><br><b>Van Contact Info:</b><br>Fernando Madeira<br>Lisbon Private Transfers<br>+351 968 376 643 WhatsApp<br>www.lisbonprivatetransfers.com<br>fernando@lisbonprivatetransfers.com' },
+                'modal-link-hotel2': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia itinerary: 73038457669454<br><br><b>Expedia Itinerary:</b><br><a href="https://www.expedia.com/trips/egti-FR2-87A-PRY9/details/NWNhNjY2NGYtZTAxOS01NDdjLTk5ZmYtZjNiMDgxMGZiYzE5O2U3ZjI3YzE5LTAwN2ItNGM0Yy04MDVjLTRiZmI3NDBkODQ3Y18wO2VnOnByb3BlcnR5OjQ2ZWRlMDBmYjg0ZjI4ZGYzNTE2ZTVmYWM1MDQ1ZDg4" target="_blank" class="text-blue-500 hover:underline">https://www.expedia.com/trips/egti-FR2-87A-PRY9/details/...</a>' },
+                'modal-link-activity4': { title: 'Activity Details', content: 'Notes: Leave Bac' },
+                'modal-link-flight3': { title: 'Flight Details', content: 'Airline: SATA<br>Flight #: S40173<br>Notes: LIS-Azores' },
+                'modal-link-hotel3': { title: 'Accommodation Details', content: 'Details: Jenn and Kirschner on one reservation - Shefman and Singer made separate resv<br>Confirmation #: Hotels.com 72060560675386' },
+                'modal-link-hotel4': { title: 'Accommodation Details', content: 'Details: All 4 under AMF<br>Confirmation #: Expedia itinerary: 72064522526321' },
+                'modal-link-flight4': { title: 'Flight Details', content: 'Airline: SATA<br>Flight #: S40283<br>Notes: Azores-BOS' },
+                'modal-link-flight5': { title: 'Flight Details', content: 'Airline: Delta<br>Flight #: DL2222<br>Notes: BOS-DTW' }
+            };
+
             // Attach event listeners for modal links
             Object.keys(modalData).forEach(id => {
                 const link = document.getElementById(id);
